@@ -10,9 +10,9 @@ COPY pom.xml /home/app
 #ERROR
 #RUN nocmd
 
-RUN mkdair -p /var/local/SP
+RUN mkdir -p /var/local/SP
 
-RUN aaamvn -f /home/app/pom.xml clean package
+RUN mvn -f /home/app/pom.xml clean package
 
 EXPOSE 8080
 
